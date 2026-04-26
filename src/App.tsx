@@ -13,7 +13,9 @@ export default function App() {
 
   const handleGenerate = useCallback(() => {
     if (!fillWord.trim() || !paragraph.trim()) return;
-    setOutput(generateWordArt(paragraph, fillWord.trim()));
+    const lines = paragraph.split('\n').filter(l => l.trim().length > 0);
+    const blocks = lines.map(line => generateWordArt(line, fillWord.trim()));
+    setOutput(blocks.join('\n\n'));
   }, [fillWord, paragraph]);
 
   return (
@@ -40,7 +42,7 @@ export default function App() {
           <label htmlFor="paragraph">Text to Convert</label>
           <textarea
             id="paragraph"
-            rows={3}
+            rows={6}
             value={paragraph}
             onChange={e => setParagraph(e.target.value)}
             placeholder="Enter text here…"

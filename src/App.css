@@ -139,6 +139,9 @@ textarea:focus {
   font-family: 'Courier New', Courier, monospace;
   white-space: pre;
   overflow-x: auto;
+  overflow-y: auto;
+  min-height: 400px;
+  max-height: 70vh;
   padding: 1.5rem;
   color: #a5f3fc;
   letter-spacing: 0;
