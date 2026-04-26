@@ -6,8 +6,8 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
+  background: #fff7f0;
+  color: #1a0a00;
   min-height: 100vh;
 }
 
@@ -25,7 +25,7 @@ header {
 header h1 {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #818cf8, #c084fc);
+  background: linear-gradient(135deg, #f97316, #ea580c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -33,17 +33,18 @@ header h1 {
 
 header p {
   margin-top: 0.5rem;
-  color: #94a3b8;
+  color: #9a5c38;
 }
 
 .controls {
-  background: #1e293b;
+  background: #ffffff;
   border-radius: 12px;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  border: 1px solid #334155;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.08);
 }
 
 .field {
@@ -55,17 +56,17 @@ header p {
 label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: #c2440e;
   letter-spacing: 0.03em;
 }
 
 input[type="text"],
 textarea {
-  background: #0f172a;
-  border: 1px solid #334155;
+  background: #fff7f0;
+  border: 1px solid #fdba74;
   border-radius: 8px;
   padding: 0.625rem 0.875rem;
-  color: #e2e8f0;
+  color: #1a0a00;
   font-size: 1rem;
   transition: border-color 0.15s;
   resize: vertical;
@@ -74,18 +75,19 @@ textarea {
 input[type="text"]:focus,
 textarea:focus {
   outline: none;
-  border-color: #818cf8;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
 }
 
 .slider-field input[type="range"] {
-  accent-color: #818cf8;
+  accent-color: #f97316;
   width: 100%;
   cursor: pointer;
 }
 
 .generate-btn {
   align-self: flex-start;
-  background: linear-gradient(135deg, #818cf8, #c084fc);
+  background: linear-gradient(135deg, #f97316, #ea580c);
   border: none;
   border-radius: 8px;
   padding: 0.625rem 2rem;
@@ -93,19 +95,22 @@ textarea:focus {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.35);
 }
 
 .generate-btn:hover {
-  opacity: 0.9;
+  opacity: 0.92;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.45);
 }
 
 .output-section {
   margin-top: 2rem;
-  background: #1e293b;
+  background: #ffffff;
   border-radius: 12px;
-  border: 1px solid #334155;
+  border: 1px solid #fed7aa;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.08);
 }
 
 .output-toolbar {
@@ -113,26 +118,27 @@ textarea:focus {
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.25rem;
-  background: #0f172a;
-  border-bottom: 1px solid #334155;
+  background: #fff7f0;
+  border-bottom: 1px solid #fed7aa;
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: #9a5c38;
 }
 
 .copy-btn {
   background: transparent;
-  border: 1px solid #334155;
+  border: 1px solid #fdba74;
   border-radius: 6px;
   padding: 0.25rem 0.75rem;
-  color: #94a3b8;
+  color: #c2440e;
   font-size: 0.8rem;
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 
 .copy-btn:hover {
-  border-color: #818cf8;
-  color: #818cf8;
+  border-color: #f97316;
+  background: #fff7f0;
+  color: #ea580c;
 }
 
 .output {
@@ -143,7 +149,8 @@ textarea:focus {
   min-height: 400px;
   max-height: 70vh;
   padding: 1.5rem;
-  color: #a5f3fc;
+  color: #c2440e;
   letter-spacing: 0;
   line-height: 1.4;
+  background: #fffaf5;
 }
