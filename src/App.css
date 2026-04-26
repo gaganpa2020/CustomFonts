@@ -1,0 +1,146 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: #94a3b8;
+}
+
+.controls {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid #334155;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0.03em;
+}
+
+input[type="text"],
+textarea {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.625rem 0.875rem;
+  color: #e2e8f0;
+  font-size: 1rem;
+  transition: border-color 0.15s;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #818cf8;
+}
+
+.slider-field input[type="range"] {
+  accent-color: #818cf8;
+  width: 100%;
+  cursor: pointer;
+}
+
+.generate-btn {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #818cf8, #c084fc);
+  border: none;
+  border-radius: 8px;
+  padding: 0.625rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.generate-btn:hover {
+  opacity: 0.9;
+}
+
+.output-section {
+  margin-top: 2rem;
+  background: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  overflow: hidden;
+}
+
+.output-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: #0f172a;
+  border-bottom: 1px solid #334155;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.copy-btn:hover {
+  border-color: #818cf8;
+  color: #818cf8;
+}
+
+.output {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre;
+  overflow-x: auto;
+  padding: 1.5rem;
+  color: #a5f3fc;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
